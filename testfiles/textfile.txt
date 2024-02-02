@@ -1,4 +1,1 @@
-File Content:
-This is the content of the file.
-Hello, Node.js!
-Hello this is Day 1 of 30 Days of NodeJS with Scaler.
+Sample content. 
