@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebSocket</title>
+  </head>
+  <body>
+    <script>
+      const socket = new WebSocket("ws://localhost:3000/websocket");
+
+      socket.onopen = () => {
+        console.log("WebSocket connection established");
+      };
+
+      socket.onmessage = (event) => {
+        console.log("Message received:", event.data);
+      };
+
+      // Send a message when the form is submitted
+      const form = document.getElementById("messageForm");
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const message = document.getElementById("messageInput").value;
+        socket.send(message);
+        console.log("Message sent:", message);
+        document.getElementById("messageInput").value = "";
+      });
+    </script>
+
+    <h1>WebSocket Test</h1>
+    <form id="messageForm">
+      <input type="text" id="messageInput" placeholder="Enter a message" />
+      <button type="submit">Send</button>
+    </form>
+  </body>
+</html>
