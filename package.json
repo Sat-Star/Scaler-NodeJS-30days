@@ -4,6 +4,7 @@
     "express-rate-limit": "^7.1.5",
     "http": "^0.0.1-security",
     "jsonwebtoken": "^9.0.2",
+    "lru-cache": "^10.2.0",
     "ws": "^8.16.0"
   }
 }
